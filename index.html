@@ -2,10 +2,10 @@
 <html>
 <head>
   <title>bibiz characters</title>
+
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial;
       background: linear-gradient(135deg, #1a1a1a, #2b2b3c);
       color: white;
@@ -14,7 +14,6 @@
 
     h1 {
       margin-top: 50px;
-      font-size: 40px;
       color: #c084fc;
     }
 
@@ -32,40 +31,22 @@
       border-radius: 15px;
     }
 
-    h2 {
-      margin: 10px 0;
-      color: #e0b3ff;
-    }
-
-    p {
-      font-size: 14px;
-      color: #bbb;
-    }
-
-    .tag {
-      display: inline-block;
+    .btn {
       margin-top: 10px;
-      padding: 5px 10px;
-      border-radius: 10px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 15px;
       background: #c084fc;
       color: black;
-      font-size: 12px;
+      cursor: pointer;
+      transition: 0.3s;
     }
-  </style .btn {
-  margin-top: 10px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 15px;
-  background: #c084fc;
-  color: black;
-  cursor: pointer;
-  transition: 0.3s;
-}>
 
-.btn:hover {
-  background: #a855f7;
-  transform: scale(1.1);
->
+    .btn:hover {
+      background: #a855f7;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
 <body>
@@ -75,16 +56,26 @@
 <div class="card">
   <img src="https://i.pinimg.com/236x/8b/1c/6f/8b1c6f4a7c3c1d6b5c9d0a1f6c9d3b5a.jpg">
   <h2>Raven</h2>
-  <p>A quiet soul who walks between shadows.</p>
-  <div class="tag">Adoptable</div>
+  <p>Shadow walker</p>
+  <button class="btn" onclick="showInfo('Raven')">View</button>
 </div>
 
 <div class="card">
   <img src="https://i.pinimg.com/236x/3c/5f/1a/3c5f1a7e4d6c2b5f1a3d9c6e8b7a1c2d.jpg">
   <h2>Nyx</h2>
-  <p>Born from the night, never meant to belong.</p>
-  <div class="tag">Owned</div>
+  <p>Child of night</p>
+  <button class="btn" onclick="showInfo('Nyx')">View</button>
 </div>
+
+<script>
+function showInfo(name) {
+  if(name === 'Raven') {
+    alert('Raven: A mysterious shadow 🖤');
+  } else if(name === 'Nyx') {
+    alert('Nyx: Born from darkness 🌙');
+  }
+}
+</script>
 
 </body>
 </html>
