@@ -13,16 +13,22 @@
     }
 
     h1 {
-      margin-top: 50px;
+      margin-top: 40px;
       color: #c084fc;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .card {
       background: #222;
-      margin: 30px auto;
-      padding: 20px;
+      margin: 20px;
+      padding: 15px;
       border-radius: 20px;
-      width: 250px;
+      width: 220px;
       box-shadow: 0 0 20px rgba(192,132,252,0.3);
     }
 
@@ -32,19 +38,17 @@
     }
 
     .btn {
+      display: inline-block;
       margin-top: 10px;
       padding: 8px 15px;
-      border: none;
       border-radius: 15px;
       background: #c084fc;
       color: black;
-      cursor: pointer;
-      transition: 0.3s;
+      text-decoration: none;
     }
 
     .btn:hover {
       background: #a855f7;
-      transform: scale(1.1);
     }
   </style>
 </head>
@@ -53,29 +57,21 @@
 
 <h1>my characters 🖤</h1>
 
-<div class="card">
-  <img src="https://i.pinimg.com/236x/8b/1c/6f/8b1c6f4a7c3c1d6b5c9d0a1f6c9d3b5a.jpg">
-  <h2>Raven</h2>
-  <p>Shadow walker</p>
-  <button class="btn" onclick="showInfo('Raven')">View</button>
-</div>
+<div class="container">
 
-<div class="card">
-  <img src="https://i.pinimg.com/236x/3c/5f/1a/3c5f1a7e4d6c2b5f1a3d9c6e8b7a1c2d.jpg">
-  <h2>Nyx</h2>
-  <p>Child of night</p>
-  <button class="btn" onclick="showInfo('Nyx')">View</button>
-</div>
+  <div class="card">
+    <img src="https://i.pinimg.com/236x/8b/1c/6f/8b1c6f4a7c3c1d6b5c9d0a1f6c9d3b5a.jpg">
+    <h3>Raven</h3>
+    <a href="raven.html" class="btn">View</a>
+  </div>
 
-<script>
-function showInfo(name) {
-  if(name === 'Raven') {
-    alert('Raven: A mysterious shadow 🖤');
-  } else if(name === 'Nyx') {
-    alert('Nyx: Born from darkness 🌙');
-  }
-}
-</script>
+  <div class="card">
+    <img src="https://i.pinimg.com/236x/3c/5f/1a/3c5f1a7e4d6c2b5f1a3d9c6e8b7a1c2d.jpg">
+    <h3>Nyx</h3>
+    <a href="nyx.html" class="btn">View</a>
+  </div>
+
+</div>
 
 </body>
 </html>
